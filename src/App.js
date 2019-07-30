@@ -42,8 +42,7 @@ function App() {
 
   const fetchFact = async () => {
     setLoading(true);
-    let randomFactId = Math.floor(1 + Math.random() * 9);
-    console.log(randomFactId);
+    let randomFactId = Math.floor(1 + Math.random() * 17);
 
     const res = await fetch(
       `https://my-json-server.typicode.com/carltonf25/hook-facts-api/hookFacts/${randomFactId}`

@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import hook1 from '../img/hook1.png';
 import hook2 from '../img/hook2.jpg';
 import hook3 from '../img/hook3.jpg';
+import hook4 from '../img/hook4.jpg';
+import hook5 from '../img/hook5.jpg';
+import hook6 from '../img/hook6.png';
+import hook7 from '../img/hook7.jpg';
 
 const FactWrapper = styled.div`
   background-color: #f4f4f4;
@@ -23,7 +27,7 @@ const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(248, 247, 216, 0.7);
+  background-color: rgba(248, 247, 216, 0.75);
   text-align: center;
   h1 {
     border-bottom: 2px solid #e63535;
@@ -37,7 +41,7 @@ const Overlay = styled.div`
 
 const FactCard = ({ content }) => {
   const getBackgroundImage = () => {
-    const imgArray = [hook1, hook2, hook3];
+    const imgArray = [hook1, hook2, hook3, hook4, hook5, hook6, hook7];
     return imgArray[Math.floor(Math.random() * imgArray.length)];
   };
 
