@@ -36,9 +36,7 @@ const FactButton = styled.button`
 function App() {
   const [whichHook, setWhichHook] = useState('hookMovie');
 
-  const [fact, setFact] = useState(
-    `Did you know this site was built using React Hooks? Check out React's stellar docs to learn how you, too, can use hooks.`
-  );
+  const [fact, setFact] = useState('');
 
   const [loading, setLoading] = useState(false);
 
@@ -55,7 +53,9 @@ function App() {
     setLoading(false);
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    fetchFact();
+  }, []);
 
   return (
     <Wrapper>
