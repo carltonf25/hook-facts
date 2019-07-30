@@ -1,25 +1,69 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useContext, useEffect } from 'react';
+import styled from 'styled-components';
+import Header from './components/header';
+import FactCard from './components/factCard';
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  h1 {
+    border-bottom: 2px solid #e63535;
+  }
+`;
+
+const FactButton = styled.button`
+  border: none;
+  -webkit-box-shadow: 2px 3px 4px 0px rgba(171, 171, 171, 0.5);
+  -moz-box-shadow: 2px 3px 4px 0px rgba(171, 171, 171, 0.5);
+  box-shadow: 2px 3px 4px 0px rgba(171, 171, 171, 0.5);
+  align-self: center;
+  margin-top: 20px;
+  padding: 1em 2em;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  background: #e63535;
+  transition: 0.2s ease;
+  border-radius: 8px;
+  :hover {
+    cursor: pointer;
+    transform: scale(1.02);
+  }
+  :active {
+    transform: scale(1.03);
+  }
+`;
 
 function App() {
+  const [whichHook, setWhichHook] = useState('hookMovie');
+  const [fact, setFact] = useState(
+    `Did you know this site was built using React Hooks? Check out React's stellar docs to learn how you, too, can use hooks.`
+  );
+
+  const [loading, setLoading] = useState(false);
+
+  const fetchFact = async () => {
+    setLoading(true);
+    let randomFactId = Math.floor(Math.random() * 10);
+
+    const res = await fetch(
+      `http://my-json-server.typicode.com/carltonf25/hook-facts-api/hookFacts/${randomFactId}`
+    );
+    const data = await res.json();
+
+    setFact(data.fact);
+    setLoading(false);
+  };
+
+  useEffect(() => {}, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <div className="App">
+        <Header />
+        <FactCard content={loading ? 'loading...' : fact} />
+      </div>
+      <FactButton onClick={() => fetchFact()}>Smee, get me another!</FactButton>
+    </Wrapper>
   );
 }
 
