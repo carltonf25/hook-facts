@@ -10,7 +10,7 @@ const FactWrapper = styled.div`
   height: 400px;
   margin: 0 auto;
   position: relative;
-  margin-top: 15%;
+  margin-top: 40px;
   -webkit-box-shadow: 2px 3px 5px 0px rgba(171, 171, 171, 0.5);
   -moz-box-shadow: 2px 3px 5px 0px rgba(171, 171, 171, 0.5);
   box-shadow: 2px 3px 5px 0px rgba(171, 171, 171, 0.5);
