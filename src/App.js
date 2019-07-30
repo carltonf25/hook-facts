@@ -42,15 +42,18 @@ function App() {
 
   const fetchFact = async () => {
     setLoading(true);
-    let randomFactId = Math.floor(Math.random() * 10);
+    let randomFactId = Math.floor(1 + Math.random() * 9);
+    console.log(randomFactId);
 
     const res = await fetch(
       `https://my-json-server.typicode.com/carltonf25/hook-facts-api/hookFacts/${randomFactId}`
     );
     const data = await res.json();
 
-    setFact(data.fact);
-    setLoading(false);
+    if (data.fact) {
+      setFact(data.fact);
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
