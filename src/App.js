@@ -35,6 +35,7 @@ const FactButton = styled.button`
 
 function App() {
   const [whichHook, setWhichHook] = useState('hookMovie');
+
   const [fact, setFact] = useState(
     `Did you know this site was built using React Hooks? Check out React's stellar docs to learn how you, too, can use hooks.`
   );
@@ -46,7 +47,7 @@ function App() {
     let randomFactId = Math.floor(Math.random() * 10);
 
     const res = await fetch(
-      `http://my-json-server.typicode.com/carltonf25/hook-facts-api/hookFacts/${randomFactId}`
+      `https://my-json-server.typicode.com/carltonf25/hook-facts-api/hookFacts/${randomFactId}`
     );
     const data = await res.json();
 
