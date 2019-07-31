@@ -1,6 +1,7 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Header from './components/header';
+import Footer from './components/footer';
 import FactCard from './components/factCard';
 
 const Wrapper = styled.div`
@@ -34,8 +35,6 @@ const FactButton = styled.button`
 `;
 
 function App() {
-  const [whichHook, setWhichHook] = useState('hookMovie');
-
   const [fact, setFact] = useState('');
 
   const [loading, setLoading] = useState(false);
@@ -66,6 +65,7 @@ function App() {
         <FactCard content={loading ? 'loading...' : fact} />
       </div>
       <FactButton onClick={() => fetchFact()}>Smee, get me another!</FactButton>
+      <Footer />
     </Wrapper>
   );
 }
