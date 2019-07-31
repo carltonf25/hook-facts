@@ -5,10 +5,15 @@ import Footer from './components/footer';
 import FactCard from './components/factCard';
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  h1 {
-    border-bottom: 2px solid #e63535;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(240, 232, 232);
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
 `;
 
@@ -31,6 +36,13 @@ const FactButton = styled.button`
   }
   :active {
     transform: scale(1.03);
+  }
+`;
+
+const CardButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  button {
   }
 `;
 
@@ -60,11 +72,11 @@ function App() {
 
   return (
     <Wrapper>
-      <div className="App">
-        <Header />
+      <Header />
+      <CardButtonWrapper>
         <FactCard content={loading ? 'loading...' : fact} />
-      </div>
-      <FactButton onClick={() => fetchFact()}>Smee, get me another!</FactButton>
+        <FactButton onClick={() => fetchFact()}>Smee, get me another!</FactButton>
+      </CardButtonWrapper>
       <Footer />
     </Wrapper>
   );

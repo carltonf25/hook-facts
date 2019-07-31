@@ -19,6 +19,8 @@ const AppFooter = styled.footer`
   a {
     color: #e63535;
   }
+  @media screen and (max-width: 900px) {
+  }
 `;
 
 const Footer = () => {

@@ -19,6 +19,9 @@ const FactWrapper = styled.div`
   -moz-box-shadow: 2px 3px 5px 0px rgba(171, 171, 171, 0.5);
   box-shadow: 2px 3px 5px 0px rgba(171, 171, 171, 0.5);
   min-height: 300px;
+  @media screen and (max-width: 760px) {
+    width: 100%;
+  }
 `;
 
 const Overlay = styled.div`

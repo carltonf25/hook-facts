@@ -16,6 +16,14 @@ const AppHeader = styled.header`
   a {
     color: #e63535;
   }
+  @media screen and (max-width: 900px) {
+    img {
+      margin: 1em;
+    }
+    code {
+      display: none;
+    }
+  }
 `;
 
 const Header = () => {
