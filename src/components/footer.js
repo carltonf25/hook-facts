@@ -7,6 +7,7 @@ const AppFooter = styled.footer`
   bottom: 0;
   width: 100%;
   display: flex;
+  margin-top: 30px;
   flex-direction: column;
   justify-content: center;
   -webkit-box-shadow: 2px 3px 5px 0px rgba(171, 171, 171, 0.5);
