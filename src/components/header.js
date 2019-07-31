@@ -24,7 +24,7 @@ const Header = () => {
       <img alt="hook-facts-logo" src={logo} />
       <div
         style={{
-          width: `80%`,
+          width: `50%`,
           margin: `20px auto`,
           color: `#fefefe`
         }}
