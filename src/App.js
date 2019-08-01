@@ -61,6 +61,9 @@ function App() {
     const data = await res.json();
 
     if (data.fact) {
+      if (fact.id === data.id) {
+        fetchFact();
+      }
       setFact(data.fact);
       setLoading(false);
     }

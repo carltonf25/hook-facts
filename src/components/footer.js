@@ -37,7 +37,9 @@ const Footer = () => {
         }}
       >
         Made with ❤ ️by <br />
-        <a href="http://carltonfreeman.com">Carlton Freeman</a>
+        <a target="blank" href="http://carltonfreeman.com">
+          Carlton Freeman
+        </a>
       </code>
     </AppFooter>
   );
