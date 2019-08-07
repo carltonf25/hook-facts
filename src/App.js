@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   }
 
   display: grid;
-  grid-template-rows: 10vh auto 10vh;
+  grid-template-rows: auto auto 10vh;
 
 `;
 
