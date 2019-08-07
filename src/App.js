@@ -5,7 +5,6 @@ import Footer from './components/footer';
 import FactCard from './components/factCard';
 
 const Wrapper = styled.div`
-  margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,6 +14,10 @@ const Wrapper = styled.div`
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
+
+  display: grid;
+  grid-template-rows: 10vh auto 10vh;
+
 `;
 
 const FactButton = styled.button`
