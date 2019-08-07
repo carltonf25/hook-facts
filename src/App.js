@@ -26,8 +26,9 @@ const FactButton = styled.button`
   -moz-box-shadow: 2px 3px 4px 0px rgba(171, 171, 171, 0.5);
   box-shadow: 2px 3px 4px 0px rgba(171, 171, 171, 0.5);
   align-self: center;
+  font-size: 1.1em;
   margin-top: 20px;
-  padding: 1em 1em;
+  padding: 1em 1.5em;
   text-transform: uppercase;
   background: #e63535;
   transition: 0.2s ease;

@@ -10,8 +10,8 @@ import hook7 from '../img/hook7.jpg';
 
 const FactWrapper = styled.div`
   background-color: #f4f4f4;
-  width: 70%;
-  height: 400px;
+  width: 60%;
+  height: 350px;
   margin: 0 auto;
   position: relative;
   margin-top: 40px;
