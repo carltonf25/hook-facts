@@ -37,7 +37,7 @@ const Overlay = styled.div`
     padding-bottom: 10px;
   }
   p {
-    font-size: 1.3em;
+    font-size: 1.1em;
     text-align: left;
   }
 `;
