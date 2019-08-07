@@ -37,7 +37,7 @@ const Footer = () => {
         }}
       >
         Made with ❤ ️by <br />
-        <a target="blank" href="http://carltonfreeman.com">
+        <a target="blank" href="https://twitter.com/carltonfreeman">
           Carlton Freeman
         </a>
       </code>
